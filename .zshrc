@@ -52,10 +52,13 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# ls colors
-alias ls='ls --color=auto'
+# ls replacement
+alias ls='exa'
 alias lsa='ls -al --color=auto'
 alias lsl='ls -l --color=auto'
+
+# cat replacement
+alias cat='bat'
 
 # confirm before overwriting something
 alias cp="cp -i"
