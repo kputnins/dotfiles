@@ -60,6 +60,9 @@ alias lsl='ls -l --color=auto'
 # cat replacement
 alias cat='bat'
 
+# htop replacement
+alias htop='btop'
+
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
