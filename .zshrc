@@ -18,25 +18,15 @@ plug "chivalryq/git-alias"
 plug "zap-zsh/completions"
 
 # Custom entries
-# NVM
-source /usr/share/nvm/init-nvm.sh
-
-# pnpm
-export PNPM_HOME="/home/kp/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-# Created by `pipx` on 2023-06-29 14:04:16
-export PATH="$PATH:/home/kp/.local/bin"
-
 # history size
 HISTSIZE=5000
 SAVEHIST=5000
 
+# Env variables
 export EDITOR='nano'
 export YSU_MESSAGE_POSITION="after"
+# Created by `pipx` on 2023-06-29 14:04:16
+export PATH="$PATH:/home/kp/.local/bin"
 
 # Aliases
 # git
@@ -53,9 +43,9 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # ls replacement
-alias ls='exa'
-alias lsa='ls -al --color=auto'
-alias lsl='ls -l --color=auto'
+alias ls='exa --icons'
+alias lsa='ls -al'
+alias lsl='ls -l'
 
 # cat replacement
 alias cat='bat'
@@ -71,3 +61,17 @@ alias rm='rm -i'
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
+
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+
+# NVM
+source /usr/share/nvm/init-nvm.sh
+
+# pnpm
+export PNPM_HOME="/home/kp/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
