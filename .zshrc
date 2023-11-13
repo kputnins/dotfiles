@@ -1,6 +1,8 @@
 # Uses https://www.zapzsh.org/
-# Uses DejaVu Sans Mono font
+# Uses DejaVu Sans Mono, FiraCode, FiraMono fonts
 # Download fonts with https://github.com/ronniedroid/getnf
+
+# install bat, exa, fzf and btop packages
 
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
@@ -75,3 +77,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# deno
+export DENO_INSTALL="/home/kp/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
